@@ -1,0 +1,35 @@
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;    
+    padding: 72px 80px;
+    background-color: $blueOne;
+
+    img {
+        width: 175px;
+        height: 50px;
+    }
+}
+
+nav {
+    ul {
+        list-style: none;
+
+        li {
+            display: flex;
+            text-decoration: none;           
+        }
+
+        a.header__link {
+            font-size: $xsmall;
+            color: $white;
+            margin-left: 55px;
+            transition: color 200ms ease-in-out;
+                    
+            &:hover{
+                color: $cyanCta;
+            }
+        }
+    }
+}
