@@ -7,6 +7,7 @@ $cyanCta: hsl(176, 68%, 64%);
 $blueCta: hsl(198, 60%, 50%);
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
+$btnGradient: linear-gradient(to right, hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 100%);
 
 //Font Sizes
 $xxsmall: 0.75rem; //12px
@@ -19,3 +20,6 @@ $xlarge: 2.2rem; //35.2px
 //Font Weights 
 $regular: 400;
 $bold: 700;
+
+//Grid
+$auto-grid-min-size: 21.25rem;

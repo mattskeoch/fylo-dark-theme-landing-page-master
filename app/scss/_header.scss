@@ -4,7 +4,7 @@
     align-items: center;
     height: 100%;
     padding: 70px 80px;
-    background-color: $blueOne; 
+    background-color: $blueOne;
 
     img {
         width: 175px;
@@ -25,7 +25,6 @@ nav {
             font-size: $xsmall;
             letter-spacing: 0.1em;
             color: $white;
-            margin-left: 55px;
             transition: color 200ms ease-in-out;
 
             &:hover {
@@ -42,11 +41,11 @@ nav {
         img {
             width: 75px;
             height: 25px;
-            margin-top: 5px;
+            margin-top: 0.25rem;
         }
 
         a.header__link {
-            margin-left: 22px;
+            margin-left: 1.375rem;
         }
     }
 }
