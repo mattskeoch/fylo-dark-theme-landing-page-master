@@ -1,8 +1,7 @@
-.hero__container {
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     width: 100%;
     padding: 0 80px;
     background-color: $blueOne;
@@ -49,13 +48,18 @@
             color: $white;
             font-weight: $bold;
             background-image: $btnGradient;
+            background-position: 0 100%;
             cursor: pointer;
+
+            &:hover {
+                background-position: 100% 0;
+            }
         }
     }
 }
 
 @media (max-width: 40.625rem) {
-    .hero__container {
+    .hero {
         background-image: url(/images/bg-curvy-mobile.svg);
         background-size: contain;
         padding: 30px 30px;
@@ -79,7 +83,7 @@
     }
 }
 
-.features__container {
+.features {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,11 +91,294 @@
     background-color: $blueTwo;
     max-width: 100%;
 
-    .features__grid {
+    &__grid {
         display: grid;
         place-items: center;
         grid-template-columns: repeat(auto-fill, minmax($auto-grid-min-size, 1fr));
-        grid-gap: 1rem;
+        column-gap: 2rem;
+        text-align: center;
+    }
+}
 
+.features__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+
+    &__heading h2 {
+        font-size: $medium;
+        letter-spacing: 0.1em;
+    }
+
+    .card__text {
+        line-height: 1.2em;
+        width: 80%;
+
+        p {
+            line-height: 1.2em;
+        }
+    }
+}
+
+@media (max-width: 40.625rem) {
+    .card__text {
+        width: 100% !important;
+    }
+
+    .features {
+        margin-top: 100px;
+    }
+}
+
+.works {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 110px;
+
+    &__img {
+        width: 50%;
+
+        img {
+            width: 90%;
+        }
+    }
+
+    &__copy {
+        width: 50%;
+
+        h2 {
+            color: $white;
+            font-size: $xlarge;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            line-height: 1.3em;
+        }
+
+        p {
+            color: $white;
+            font-size: $small;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            line-height: 1.3em;
+        }
+
+        img {
+            display: inline;
+        }
+
+        a {
+            color: $cyanCta;
+
+            &:after {
+                content: '';
+                height: 1px;
+                background: $cyanCta;
+                display: block;
+                margin-top: 6px;
+                width: 165px;
+            }
+        }
+    }
+}
+
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 80px;
+    margin-bottom: 250px;
+
+    &__card {
+        position: relative;
+        padding: 40px 20px;
+        background: $blueOne;
+        color: $white;
+        max-width: 360px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+
+        &:first-child:before {
+            content: url("/images/bg-quotes.png");
+            position: absolute;
+            top: -35px;
+            left: -10px;
+            z-index: -1;
+        }
+
+        p {
+            font-size: $xsmall;
+            line-height: 1.1em;
+        }
+    }
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 855px;
+    margin-top: -180px;
+    padding: 70px;
+    border-radius: 15px;
+    background-color: $blueOne;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    h2 {
+        color: $white;
+        font-size: $xlarge;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        line-height: 1.3em;
+    }
+
+    p {
+        color: $white;
+        font-size: $xsmall;
+        line-height: 1.1em;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+}
+
+form#signup {
+    display: flex;
+
+    input#email {
+        padding: 15px;
+        min-width: 350px;
+        width: 450px;
+        border-radius: 50px;
+        border: none;
+        margin-right: 20px;
+    }
+
+    button#submit {
+        padding: 15px 33px;
+        border-radius: 50px;
+        border: none;
+        color: $white;
+        font-size: $xsmall;
+        font-weight: $bold;
+        background-image: $btnGradient;
+        background-position: 0 100%;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
+.footer {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    padding: 35px 90px;
+    background-color: $blueThree;
+
+    .logo-wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    .content-wrapper {
+        display: flex;
+        width: 100%;
+
+        .content--description {
+            display: flex;
+            width: 35%;
+
+            .content--description-img {
+                img {
+                    width: 26px;
+                }
+            }
+
+            p {
+                color: $white;
+                font-size: $xsmall;
+                line-height: 1.1em;
+            }
+        }
+
+        .content--contact {
+            width: 17.5%;
+
+            a {
+                color: $white;
+                font-size: $xsmall;
+                line-height: 1.1em;
+                display: block;
+            }
+        }
+
+        .content--menu {
+            width: 30%;
+            display: flex;
+        }
+
+        .content--social {
+            width: 17.5%;
+        }
+
+        .content--social {
+            display: flex;
+            justify-self: end;
+            align-items: flex-start;
+
+            img {
+                width: 37%;
+
+                &:not(:first-of-type) {
+                    margin-left: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 43.75rem) {
+
+    .content-wrapper,
+    .review,
+    .works,
+    form#signup {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer--menu-one li a,
+.footer--menu-two li a {
+    color: $white;
+    font-size: $xsmall;
+    line-height: 1.1em;
+
+    &:hover {
+        color: $cyanCta;
+    }
+}
+
+.footer--menu-one li:not(:first-of-type),
+.footer--menu-two li:not(:first-of-type) {
+    margin-top: 22px;
+}
+
+.att {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: $white;
+    font-size: $xsmall;
+
+    a {
+        color: $white;
+        text-decoration: underline;
     }
 }

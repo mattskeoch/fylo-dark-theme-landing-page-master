@@ -1,4 +1,4 @@
-.header__container {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +13,8 @@
 }
 
 nav {
-    ul {
+    ul.header__list {
+        display: flex;
         list-style: none;
 
         li {
@@ -22,6 +23,7 @@ nav {
         }
 
         a.header__link {
+            display: block;
             font-size: $xsmall;
             letter-spacing: 0.1em;
             color: $white;

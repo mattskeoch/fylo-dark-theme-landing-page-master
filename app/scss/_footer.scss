@@ -1,0 +1,13 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 110px 80px;
+    padding-top: 110px;
+    padding-bottom: 100px;
+    padding-left: 111px;
+    padding-right: 80px;
+    background-color: $blueThree;
+    z-index: 1;
+}
